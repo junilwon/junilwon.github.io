@@ -1,0 +1,238 @@
+:root {
+    --primary-color: #184D1E;
+    --background-color: #f8f8f8;
+    --content-bg-color: #ffffff;
+    --text-color: #333333;
+    --text-secondary-color: #555555;
+    --text-on-primary-color: #ffffff;
+    --border-color: #e0e0e0;
+    --header-bg-color: #ffffff;
+    --footer-bg-color: #333333;
+    --footer-text-color: #ffffff;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: var(--header-bg-color);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav .nav-brand {
+    font-size: 1.4em;
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-secondary-color);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+main section {
+    margin-bottom: 40px;
+}
+
+#about {
+    padding-top: 60px;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.profile-info h1 {
+    font-size: 2.8em;
+    margin: 0 0 10px 0;
+    color: var(--text-color);
+}
+
+.profile-info .subtitle {
+    font-size: 1.1em;
+    color: var(--text-secondary-color);
+    margin-bottom: 25px;
+}
+
+.links .button {
+    display: inline-block;
+    background: var(--content-bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 10px 18px;
+    text-decoration: none;
+    margin: 5px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.links .button:hover {
+    background-color: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.section-title {
+    background-color: var(--primary-color);
+    color: var(--text-on-primary-color);
+    text-align: center;
+    padding: 25px 20px;
+}
+
+.section-title h2 {
+    font-size: 1.8em;
+    margin: 0;
+    padding: 0;
+}
+
+.content-box {
+    background-color: var(--content-bg-color);
+    border: 1px solid var(--border-color);
+    border-top: none;
+    padding: 30px;
+}
+
+#news ul {
+    list-style: none;
+    padding: 0;
+}
+
+#news li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: baseline;
+}
+
+#news .date {
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-right: 15px;
+    min-width: 90px;
+}
+
+.publication {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px dashed var(--border-color);
+}
+.publication:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.publication h3 {
+    font-size: 1.2em;
+    margin: 0 0 5px 0;
+    color: var(--text-color);
+}
+
+.publication .authors, .publication .venue {
+    font-size: 0.95em;
+    margin: 0 0 10px 0;
+    color: var(--text-secondary-color);
+}
+
+.publication .pub-links a {
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.publication .pub-links a:hover {
+    text-decoration: underline;
+}
+
+.experience-item {
+    margin-bottom: 25px;
+}
+.experience-item:last-child {
+    margin-bottom: 0;
+}
+.experience-item h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+.experience-item .exp-subtitle {
+    margin: 4px 0 8px 0;
+    color: var(--text-secondary-color);
+    font-size: 0.9em;
+}
+
+.experience-item ul {
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+footer {
+    background: var(--footer-bg-color);
+    color: var(--footer-text-color);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
+
+@media (max-width: 768px) {
+    .profile-info h1 { font-size: 2.2em; }
+    .section-title h2 { font-size: 1.5em; }
+    .content-box { padding: 30px 20px; }
+}
